@@ -2,7 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>React Tik Tak Toe</title>
+    <title>React Tic Tac Toe</title>
+
+     <!-- Favicons -->
+  <link href="favicon.png" rel="icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+
     <style>
       button {
         
@@ -12,11 +17,12 @@
       }
       
       .game-board {
-        width: 600px;
-        height: 600px;
+        width: 50vw;
+        height: 50vw;
         margin: 0 auto;
         background-color: plum;
-        
+        min-width: fit-content;
+        min-height: fit-content;
         border: 6px solid black;
         border-radius: 10px;
         display: grid;
@@ -46,7 +52,6 @@
    
       h1 {
         text-align: center;
-        
       }
       h2{
         text-align: center;
@@ -69,12 +74,42 @@
         background-color: palevioletred;
       }
 
+      #restart{
+        background-color: palevioletred;
+        border: 3px solid purple;
+        color: blanchedalmond;
+        border-radius: 10px;
+        width: 8vw;
+        height: 3vw;
+        font-size: 15px;
+        font-weight: bold;
+        min-width: fit-content;
+        margin-left: 5vw;
+        margin-bottom: 1vw;
+        position: relative;
+        text-align: center;  
+        transition: 0.7s ease-in;
+      }
+
+      #restart:active{
+        top: 1px;
+        transition: ease-in;
+      }
+
+      #restart:hover{
+        bottom: 1px;
+        font-weight: bolder;
+        background-color: palevioletred;
+        border: 3px solid purple;
+        transition: 0.7s ease-in;
+      }
+
     </style>
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <h1>React Tik Tak Toe</h1>
+    <h1 style="text-decoration-line: underline; color: purple;">Tic Tac Toe Game</h1>
 
     <!-- We will put our React component inside this div. -->
     <div id="root"></div>
